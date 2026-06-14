@@ -1,0 +1,7 @@
+# never publish these
+database/
+*.alp.autosave
+*.backup_hybrid
+output/
+.DS_Store
+*.bak
