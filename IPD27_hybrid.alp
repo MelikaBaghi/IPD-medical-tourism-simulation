@@ -959,7 +959,7 @@ doctors(6).VisitTime/doctors(6).TotalTime)/2]]></Code>
 						<UnitType><![CDATA[NONE]]></UnitType>
 						<SdArray>false</SdArray>
 						<DefaultValue Class="CodeValue">
-							<Code><![CDATA[10]]></Code>
+							<Code><![CDATA[16]]></Code>
 						</DefaultValue>
 						<ParameterEditor>
 							<Id>1678888279725</Id>
@@ -34856,7 +34856,7 @@ agent.receive("Hospitalization");]]></Code>
 		<AnimationProperties>
 			<StopNever>true</StopNever>
 			<ExecutionMode>realTimeScaled</ExecutionMode>
-			<RealTimeScale>1.0</RealTimeScale>
+			<RealTimeScale>10000.0</RealTimeScale>
 			<EnableZoomAndPanning>true</EnableZoomAndPanning>
 			<EnableDeveloperPanel>false</EnableDeveloperPanel>
 			<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
@@ -34877,7 +34877,7 @@ agent.receive("Hospitalization");]]></Code>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<AfterSimulationRunCode><![CDATA[// Auto-log results to CSV after each run
 try {
-    String path = "/Users/mbaghi3/Desktop/Dr_MosadeghPaper/W1_runs.csv";
+    String path = "/Users/mbaghi3/Desktop/Dr_MosadeghPaper/loaded_hybrid.csv";
     java.io.File f = new java.io.File(path);
     boolean newFile = !f.exists();
     java.io.FileWriter w = new java.io.FileWriter(f, true);
@@ -34886,7 +34886,7 @@ try {
     }
     w.write(getEngine().time() + "," + root.LeaveBefore + "," + root.TotalWT.mean() + "," + root.HospitalWT.mean() + "," + root.HospitalTouristWT.mean() + "," + root.InQueueButEmergent + "," + root.Cured + "," + (100*root.Specialist1.utilization()) + "," + (100*root.Specialist2.utilization()) + "," + (100*root.Specialist3.utilization()) + "," + (100*root.Specialist4.utilization()) + "," + (100*root.Specialist5.utilization()) + "," + (100*root.Practitioner.utilization()) + "\n");
     w.close();
-    traceln("ROW SAVED to W1_runs.csv");
+    traceln("ROW SAVED to loaded_hybrid.csv");
 } catch (Exception e) { traceln("COULD NOT SAVE: " + e.getMessage()); }
 ]]></AfterSimulationRunCode>
 			<SeedValue>1</SeedValue>
@@ -35056,7 +35056,7 @@ try {
 				<Title><![CDATA[test7 : Simulation]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
-				<RealTimeScale>1.0</RealTimeScale>
+				<RealTimeScale>10000.0</RealTimeScale>
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
