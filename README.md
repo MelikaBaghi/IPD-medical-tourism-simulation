@@ -39,8 +39,8 @@ escalation, and realistic throughput that a pure discrete-event model suppresses
 AnyLogic 8.9.8 (PLE or higher). No other dependencies.
 
 ## Citation
-Baghi, M. & Mosadegh, H. (2026). *Reducing Waiting Time for Medical Tourists Through Hybrid
-Agent-Based and Discrete-Event Simulation: A Hospital Case Study* (software).
+Baghi, M. & Mosadegh, H. (2026). *Compatible-Section Bed Sharing and Behavioural Risk in a Shared
+Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event Simulation* (software).
 DOI: _added on archival to Zenodo._
 
 ## License
