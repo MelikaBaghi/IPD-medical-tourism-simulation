@@ -27089,6 +27089,28 @@ Again]]></Text>
 					</Font>
 					<Alignment>LEFT</Alignment>
 				</Text>
+				<Text>
+					<Id>1781671408049</Id>
+					<Name><![CDATA[text2]]></Name>
+					<X>50</X><Y>690</Y>
+					<Label><X>0</X><Y>-10</Y></Label>
+					<PublicFlag>true</PublicFlag>
+					<PresentationFlag>true</PresentationFlag>
+					<ShowLabel>false</ShowLabel>
+					<DrawMode>SHAPE_DRAW_2D</DrawMode>
+					<EmbeddedIcon>false</EmbeddedIcon>
+					<Z>0</Z>
+					<Rotation>0.0</Rotation>
+					<Color>-16777216</Color>
+					<Text><![CDATA[text]]></Text>
+					<TextCode><![CDATA["Recovered: " + Cured + "    Early dropouts: " + LeaveBefore + "    In-queue emergencies: " + InQueueButEmergent + "\nTourists: " + TouristNo + "    Locals: " + LocalNo + "    Day " + (int)time() + " of 300\nMean bed-admission-queue wait: " + (Math.round(HospitalWT.mean()*10)/10.0) + " days"]]></TextCode>
+					<Font>
+						<Name>SansSerif</Name>
+						<Size>10</Size>
+						<Style>0</Style>
+					</Font>
+					<Alignment>LEFT</Alignment>
+				</Text>
 			</Presentation>
 
 				</Level>
