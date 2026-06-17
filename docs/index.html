@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Medical-Tourist Hospital — Hybrid ABS+DES Simulation</title>
+<style>
+  :root{
+    --bg:#0f1b2d; --card:#16263d; --ink:#eaf0f7; --muted:#9fb3c8;
+    --accent:#36c2a8; --accent2:#5b9bd5; --line:#243650;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+       background:var(--bg);color:var(--ink);line-height:1.55}
+  .wrap{max-width:860px;margin:0 auto;padding:32px 20px 64px}
+  header{text-align:center;padding:28px 0 8px}
+  h1{font-size:1.9rem;margin:.2em 0;line-height:1.25}
+  .sub{color:var(--muted);font-size:1.02rem;max-width:640px;margin:.4em auto 0}
+  .authors{color:var(--muted);font-size:.92rem;margin-top:14px}
+  .result{background:linear-gradient(135deg,#16263d,#1b3350);border:1px solid var(--line);
+          border-radius:14px;padding:22px 24px;margin:26px 0;text-align:center}
+  .result .big{font-size:2.4rem;font-weight:700;color:var(--accent)}
+  .result .cap{color:var(--muted);font-size:.95rem;margin-top:4px}
+  .btns{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin:26px 0}
+  a.btn{display:inline-block;text-decoration:none;padding:12px 20px;border-radius:10px;font-weight:600;
+        border:1px solid var(--line);color:var(--ink);background:var(--card);transition:transform .08s ease}
+  a.btn:hover{transform:translateY(-1px)}
+  a.btn.primary{background:var(--accent);color:#06241d;border-color:var(--accent)}
+  a.btn.alt{background:var(--accent2);color:#08203a;border-color:var(--accent2)}
+  h2{font-size:1.2rem;border-bottom:1px solid var(--line);padding-bottom:6px;margin-top:38px}
+  ul{padding-left:20px}
+  li{margin:.35em 0}
+  .demo{background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:18px;
+        text-align:center;color:var(--muted);margin-top:14px}
+  code{background:#0c1726;padding:2px 6px;border-radius:5px;color:#cfe3ff;font-size:.92em}
+  footer{margin-top:48px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem;text-align:center}
+  a{color:var(--accent2)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>Compatible-Section Bed Sharing in a Shared<br>Medical-Tourism Hospital Department</h1>
+    <p class="sub">A behaviour-explicit <strong>hybrid agent-based + discrete-event</strong> simulation
+       of a hospital department where medical tourists and local patients share the same beds,
+       specialists, and appointment slots.</p>
+    <p class="authors">Melika Baghi &amp; Hadi Mosadegh · Amirkabir University of Technology, Tehran</p>
+  </header>
+
+  <div class="result">
+    <div class="big">&minus;43%</div>
+    <div class="cap">Compatible-section bed sharing cuts the mean inpatient admission queue
+       (25.9 &rarr; 14.8 days, <em>p</em> &lt; 0.001), replicated over 30 randomized-seed runs
+       versus an otherwise-identical discrete-event-only model.</div>
+  </div>
+
+  <div class="btns">
+    <a class="btn primary" href="https://cloud.anylogic.com" target="_blank" rel="noopener">▶ Run it online</a>
+    <a class="btn alt" href="https://github.com/melikabaghi/IPD-medical-tourism-simulation" target="_blank" rel="noopener">Source &amp; download</a>
+    <a class="btn" href="https://github.com/melikabaghi/IPD-medical-tourism-simulation/blob/main/CITATION.cff" target="_blank" rel="noopener">Cite this work</a>
+  </div>
+
+  <h2>Run it live in your browser</h2>
+  <div class="demo">
+    <!-- After publishing the model to AnyLogic Cloud, paste its embed code here.
+         It will look like: <iframe src="https://cloud.anylogic.com/models/.../embed" width="100%" height="560" frameborder="0"></iframe> -->
+    Interactive demo coming soon — the model will run here on <strong>AnyLogic Cloud</strong>,
+    no installation required. (Replace this box with your AnyLogic Cloud embed code.)
+  </div>
+
+  <h2>What makes it a hybrid model</h2>
+  <ul>
+    <li><strong>Agent-based patient behaviour</strong> — medication adherence, doctor switching,
+        online vs. in-person channel choice, and early abandonment are part of the operational logic.</li>
+    <li><strong>Compatible-section bed sharing</strong> — wards borrow each other's idle beds through
+        inter-agent message passing.</li>
+    <li><strong>Discrete-event patient flow</strong> — visits, hospitalisation, recovery, and re-presentation.</li>
+  </ul>
+
+  <h2>Open the model yourself</h2>
+  <ul>
+    <li>Download <code>IPD27_hybrid.alp</code> from the repository.</li>
+    <li>Open it in <strong>AnyLogic 8.9.8</strong> (Personal Learning Edition is enough).</li>
+    <li>Select the <strong>Simulation</strong> experiment and press <strong>Run</strong>.</li>
+  </ul>
+
+  <footer>
+    Submitted to <em>Health Care Management Science</em>.
+    Code &amp; model: MIT · Data, figures, docs: CC-BY-4.0.
+  </footer>
+</div>
+</body>
+</html>
