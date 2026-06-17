@@ -28,6 +28,14 @@ escalation, and realistic throughput that a pure discrete-event model suppresses
 4. *(Optional)* results are appended to a CSV — the path is set in the experiment's
    *After simulation run* action; change it to a folder on your machine.
 
+## Try it online (no install)
+An interactive web build runs on **AnyLogic Cloud** — open the link, press play, and watch the
+dashboard live in your browser, with no AnyLogic installation required:
+
+➡️ **[Run the model in your browser](https://cloud.anylogic.com)** *(public link added after publishing)*
+
+The `.alp` file in this repository is the editable source for opening in AnyLogic.
+
 ## Contents
 | Path | What |
 |---|---|

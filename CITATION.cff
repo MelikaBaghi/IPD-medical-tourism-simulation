@@ -1,0 +1,22 @@
+cff-version: 1.2.0
+message: "If you use this model, please cite it as below."
+type: software
+title: "Compatible-Section Bed Sharing and Behavioural Risk in a Shared Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event Simulation"
+authors:
+  - family-names: Baghi
+    given-names: Melika
+    affiliation: "Department of Industrial and Systems Engineering, Amirkabir University of Technology"
+  - family-names: Mosadegh
+    given-names: Hadi
+    affiliation: "Department of Industrial and Systems Engineering, Amirkabir University of Technology"
+year: 2026
+license: MIT
+repository-code: "https://github.com/melikabaghi/IPD-medical-tourism-simulation"
+keywords:
+  - medical tourism
+  - hybrid simulation
+  - agent-based modeling
+  - discrete-event simulation
+  - hospital operations
+  - bed sharing
+  - AnyLogic
