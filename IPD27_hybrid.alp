@@ -4025,7 +4025,7 @@ if(home.size()>0){
     	if ((time()-p.HomeTime >= 5) && (p.emergent) && (p.InHome)){
 			p.receive("Again");
 			p.receive("emergency");
-			traceln("khatarrrrrr");
+			//traceln("khatarrrrrr");
 			home.stopDelay(p);	
 }}}
 if(home1.size()>0){
@@ -4034,7 +4034,7 @@ if(home1.size()>0){
     	if ((time()-p.HomeTime >= 5) && (p.emergent) && (p.InHome)){
 			p.receive("Again");
 			p.receive("emergency");
-			traceln("khatarrrrrr");
+			//traceln("khatarrrrrr");
 			home1.stopDelay(p);	
 }}}
 if(home2.size()>0){
@@ -4043,7 +4043,7 @@ if(home2.size()>0){
     	if ((time()-p.HomeTime >= 5) && (p.emergent) && (p.InHome)){
 			p.receive("Again");
 			p.receive("emergency");
-			traceln("khatarrrrrr");
+			//traceln("khatarrrrrr");
 			home2.stopDelay(p);	
 }}}
 
@@ -18261,8 +18261,8 @@ TotalWT.add(time()-agent.entryTime);
 								<Code><![CDATA[VideoConferenceWT.add(time()-agent.entryTime);
 TotalWT.add(time()-agent.entryTime);
 if (agent.emergent){
-	traceln("man rad shodam haha. daram miram dr\n");
-	traceln(agent);}]]></Code>
+	//traceln("man rad shodam haha. daram miram dr\n");
+	}]]></Code>
 							</Value>
 						</Parameter>
 						<Parameter>
@@ -27114,7 +27114,7 @@ Again]]></Text>
     			<TimePlot>
 					<Id>1781673497267</Id>
 					<Name><![CDATA[plot4]]></Name>
-					<X>690</X><Y>640</Y>
+					<X>540</X><Y>1660</Y>
 					<Label><X>0</X><Y>-10</Y></Label>
 					<PublicFlag>true</PublicFlag>
 					<PresentationFlag>true</PresentationFlag>
@@ -27135,15 +27135,15 @@ Again]]></Text>
 						</RecurrenceCode>
 					</RecurrenceProperties>
 					<EmbeddedIcon>false</EmbeddedIcon>
-					<Width>260</Width>
-					<Height>210</Height>
+					<Width>330</Width>
+					<Height>140</Height>
 					<BackgroundColor/>
 					<BorderColor/>
 					<ChartArea>
 						<XOffset>50</XOffset>
 						<YOffset>30</YOffset>
-						<Width>180</Width>
-						<Height>120</Height>
+						<Width>250</Width>
+						<Height>50</Height>
 						<BackgroundColor>-1</BackgroundColor>
 						<BorderColor>-16777216</BorderColor>
 						<GridColor>-12566464</GridColor>
@@ -35166,7 +35166,7 @@ try {
 			</Parameters>
 			<PresentationProperties>
 				<EnableZoomAndPanning>true</EnableZoomAndPanning>
-				<ExecutionMode><![CDATA[virtualTime]]></ExecutionMode>
+				<ExecutionMode><![CDATA[realTimeScaled]]></ExecutionMode>
 				<Title><![CDATA[test7 : Simulation]]></Title>
 				<EnableDeveloperPanel>true</EnableDeveloperPanel>
 				<ShowDeveloperPanelOnStart>false</ShowDeveloperPanelOnStart>
@@ -35174,12 +35174,12 @@ try {
 			</PresentationProperties>
 			<ModelTimeProperties>
 				<StopOption><![CDATA[Stop at specified time]]></StopOption>
-				<InitialDate><![CDATA[1656460800000]]></InitialDate>
+				<InitialDate><![CDATA[1778803200000]]></InitialDate>
 				<InitialTime><![CDATA[0.0]]></InitialTime>
-				<FinalDate><![CDATA[1682380800000]]></FinalDate>
+				<FinalDate><![CDATA[1804723200000]]></FinalDate>
 				<FinalTime><![CDATA[300.0]]></FinalTime>
 			</ModelTimeProperties>
-			<BypassInitialScreen>true</BypassInitialScreen>
+			<BypassInitialScreen>false</BypassInitialScreen>
 		</SimulationExperiment>	
 	</Experiments>
 	<ModelResources>
