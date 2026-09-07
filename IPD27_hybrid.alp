@@ -35018,9 +35018,11 @@ agent.receive("Hospitalization");]]></Code>
 			<MaximumMemory>512</MaximumMemory>
 			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
-			<AfterSimulationRunCode><![CDATA[// Auto-log results to CSV after each run
+			<AfterSimulationRunCode><![CDATA[// Auto-log results to CSV after each run.
+// The file is written next to the model. To send it somewhere else, replace
+// the relative name below with an absolute path on your own machine.
 try {
-    String path = "/Users/mbaghi3/Desktop/Dr_MosadeghPaper/loaded_hybrid.csv";
+    String path = "loaded_hybrid.csv";
     java.io.File f = new java.io.File(path);
     boolean newFile = !f.exists();
     java.io.FileWriter w = new java.io.FileWriter(f, true);
