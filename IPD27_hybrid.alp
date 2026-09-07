@@ -16,7 +16,8 @@
   Copyright (c) 2026 Melika Baghi and Hadi Mosadegh.
   Released under the MIT Licence. See LICENSE in the source repository.
 
-  Source:   https://github.com/melikabaghi/IPD-medical-tourism-simulation
+  Source:   https://github.com/MelikaBaghi/IPD-medical-tourism-simulation
+  DOI:      https://doi.org/10.5281/zenodo.22646799
   Contact:  mbaghi3@gatech.edu
 
   If you use, adapt, or build on this model in published or taught work,
@@ -36,7 +37,8 @@
 Author: Melika Baghi. Co-author: Hadi Mosadegh.
 Amirkabir University of Technology, Tehran, Iran.
 Copyright (c) 2026. MIT Licence. Please cite if you use or adapt this model.
-https://github.com/melikabaghi/IPD-medical-tourism-simulation]]></Description>
+https://github.com/MelikaBaghi/IPD-medical-tourism-simulation
+DOI: https://doi.org/10.5281/zenodo.22646799]]></Description>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[test7]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>

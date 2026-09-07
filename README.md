@@ -1,5 +1,7 @@
 # Medical-Tourist Hospital Flow: a Hybrid Agent-Based and Discrete-Event Simulation
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22646799.svg)](https://doi.org/10.5281/zenodo.22646799)
+
 A behaviour-explicit hybrid (ABS + DES) simulation, built in AnyLogic, of a multi-specialty
 international-patient hospital department that serves **medical tourists and local patients
 from the same beds, specialists and appointment slots**.
@@ -58,13 +60,14 @@ licence notice is embedded in the header of the `.alp` file itself.
 
 > Baghi, M. and Mosadegh, H. (2026). *Compatible-Section Bed Sharing and Behavioural Risk
 > in a Shared Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event
-> Simulation* (software).
+> Simulation* (software). https://doi.org/10.5281/zenodo.22646799
 
 A machine-readable version is in [`CITATION.cff`](CITATION.cff), and GitHub renders it as a
 "Cite this repository" button in the sidebar.
 
-Tagged releases are archived in Zenodo and issued a DOI, which gives the model a permanent,
-dated citation that resolves even if this repository moves. See [`RELEASING.md`](RELEASING.md).
+This model is archived in Zenodo under the DOI above. That DOI always resolves to the
+newest version and gives the model a permanent, dated citation even if this repository
+moves or is renamed. See [`RELEASING.md`](RELEASING.md) for how new versions are published.
 
 ## Licence
 
