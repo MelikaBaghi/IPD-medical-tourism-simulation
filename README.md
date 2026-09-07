@@ -1,56 +1,80 @@
-# Medical-Tourist Hospital Flow — Hybrid Agent-Based + Discrete-Event Simulation
+# Medical-Tourist Hospital Flow: a Hybrid Agent-Based and Discrete-Event Simulation
 
-A behaviour-explicit **hybrid (ABS + DES)** simulation, built in AnyLogic, of a multi-specialty
-international-patient hospital department that serves **medical tourists and local patients** from
-the *same* beds, specialists, and appointment slots.
+A behaviour-explicit hybrid (ABS + DES) simulation, built in AnyLogic, of a multi-specialty
+international-patient hospital department that serves **medical tourists and local patients
+from the same beds, specialists and appointment slots**.
 
-> **Baghi, M. & Mosadegh, H.** — Department of Industrial and Systems Engineering,
-> Amirkabir University of Technology, Tehran, Iran. Submitted to *Health Care Management Science*.
+**Melika Baghi** and Hadi Mosadegh
+Department of Industrial and Systems Engineering, Amirkabir University of Technology, Tehran, Iran
 
-## What makes it a *hybrid* model
-- **Agent-based patient behaviour** — medication adherence, doctor switching, online vs. in-person
-  channel choice, and early abandonment are part of the operational logic, not post-hoc discussion.
-- **Compatible-section bed sharing** — wards borrow each other's idle beds through inter-agent
-  message passing.
-- **Discrete-event patient flow** — visits, hospitalisation, recovery, and re-presentation.
+## What makes it hybrid
+
+- **Agent-based patient behaviour.** Medication adherence, doctor switching, online versus
+  in-person channel choice, and early abandonment are part of the operational logic rather
+  than post-hoc discussion.
+- **Compatible-section bed sharing.** Wards borrow each other's idle beds through
+  inter-agent message passing.
+- **Discrete-event patient flow.** Visits, hospitalisation, recovery and re-presentation.
 
 ## Headline result
-Across 30 randomized-seed replications, compatible-section bed sharing **reduces the mean inpatient
-admission queue by 43%** (25.9 -> 14.8 days; *p* < 0.001) versus an otherwise-identical
-discrete-event-only model. The agent layer additionally reproduces patient abandonment, emergency
-escalation, and realistic throughput that a pure discrete-event model suppresses by construction.
+
+Across 30 randomized-seed replications, compatible-section bed sharing reduces the mean
+inpatient admission queue by **43 percent** (25.9 to 14.8 days, *p* < 0.001) against an
+otherwise identical discrete-event-only model. The agent layer also reproduces patient
+abandonment, emergency escalation and realistic throughput that a pure discrete-event model
+suppresses by construction.
 
 ## Run it
-1. Open **`IPD27_hybrid.alp`** in **AnyLogic 8.9.8** (Personal Learning Edition is sufficient).
-2. Select the **Simulation** experiment -> **Run**.
-3. Ward configuration (beds, specialists, slots) is read from the bundled **`database/`**
-   (the `HOSPITAL` table). The run-log database is rebuilt automatically on first run.
-4. *(Optional)* results are appended to a CSV — the path is set in the experiment's
-   *After simulation run* action; change it to a folder on your machine.
 
-## Try it online (no install)
-An interactive web build runs on **AnyLogic Cloud** — open the link, press play, and watch the
-dashboard live in your browser, with no AnyLogic installation required:
+1. Open `IPD27_hybrid.alp` in **AnyLogic 8.9.8**. The Personal Learning Edition is enough.
+2. Select the **Simulation** experiment and press **Run**.
+3. Ward configuration (beds, specialists, slots) is read from the bundled `database/`
+   folder, in the `HOSPITAL` table. The run-log database rebuilds itself on first run.
+4. Optionally, results append to a CSV. The path is set in the experiment's *After
+   simulation run* action; change it to a folder on your machine.
 
-➡️ **[Run the model in your browser](https://cloud.anylogic.com)** *(public link added after publishing)*
+### Run it in a browser instead
 
-The `.alp` file in this repository is the editable source for opening in AnyLogic.
+An interactive web build runs on AnyLogic Cloud, so you can press play and watch the
+dashboard without installing anything:
+
+**https://cloud.anylogic.com/model/ddca6c4e-7a3b-4015-bd9f-fb8d02cb30be**
+
+The `.alp` file here is the editable source.
 
 ## Contents
+
 | Path | What |
 |---|---|
 | `IPD27_hybrid.alp` | the hybrid ABS+DES model |
-| `database/` | the model's configuration database (`HOSPITAL` ward table) |
-| `designs/` | user-interface / dashboard designs |
+| `database/` | the model's configuration database, required to run |
+| `paper/` | the journal manuscript, added once the review is resolved |
+| `docs/` | project landing page |
+
+## Citing this model
+
+If you use, adapt, teach with, or build on this model, please cite it. The authorship and
+licence notice is embedded in the header of the `.alp` file itself.
+
+> Baghi, M. and Mosadegh, H. (2026). *Compatible-Section Bed Sharing and Behavioural Risk
+> in a Shared Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event
+> Simulation* (software).
+
+A machine-readable version is in [`CITATION.cff`](CITATION.cff), and GitHub renders it as a
+"Cite this repository" button in the sidebar.
+
+Tagged releases are archived in Zenodo and issued a DOI, which gives the model a permanent,
+dated citation that resolves even if this repository moves. See [`RELEASING.md`](RELEASING.md).
+
+## Licence
+
+Model and code: **MIT** (see [`LICENSE`](LICENSE)).
+Documentation and figures: **CC BY 4.0**.
+
+MIT is permissive: you may use this commercially, modify it, and redistribute it. The one
+condition is that the copyright and licence notice stays with it. That notice names the
+authors, which is the point.
 
 ## Requirements
-AnyLogic 8.9.8 (PLE or higher). No other dependencies.
 
-## Citation
-Baghi, M. & Mosadegh, H. (2026). *Compatible-Section Bed Sharing and Behavioural Risk in a Shared
-Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event Simulation* (software).
-DOI: _added on archival to Zenodo._
-
-## License
-- Code & model: **MIT** (see `LICENSE`).
-- Data, figures, documentation: **CC-BY-4.0** (https://creativecommons.org/licenses/by/4.0/).
+AnyLogic 8.9.8, Personal Learning Edition or higher. No other dependencies.

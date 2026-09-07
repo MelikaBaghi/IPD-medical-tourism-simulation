@@ -3,11 +3,40 @@
 *************************************************
 	         AnyLogic Project File
 *************************************************
+
+  Compatible-Section Bed Sharing and Behavioural Risk in a Shared
+  Medical-Tourism Hospital Department
+  A Hybrid Agent-Based and Discrete-Event Simulation
+
+  Author:      Melika Baghi
+  Co-author:   Hadi Mosadegh
+  Affiliation: Department of Industrial and Systems Engineering,
+               Amirkabir University of Technology, Tehran, Iran
+
+  Copyright (c) 2026 Melika Baghi and Hadi Mosadegh.
+  Released under the MIT Licence. See LICENSE in the source repository.
+
+  Source:   https://github.com/melikabaghi/IPD-medical-tourism-simulation
+  Contact:  mbaghi3@gatech.edu
+
+  If you use, adapt, or build on this model in published or taught work,
+  please cite it. See CITATION.cff in the repository.
+
+  This notice is part of the licence terms. Removing or altering it does
+  not transfer authorship.
+*************************************************
 -->
 <AnyLogicWorkspace WorkspaceVersion="1.9" AnyLogicVersion="8.9.8.202602271013" AlpVersion="8.9.7">
 <Model>
 	<Id>1656469006365</Id>
 	<Name><![CDATA[IPD27]]></Name>
+	<Description><![CDATA[An interactive hospital patient-flow simulation examining capacity, admission decisions, practitioner availability, waiting times, and inpatient bed congestion.
+
+---
+Author: Melika Baghi. Co-author: Hadi Mosadegh.
+Amirkabir University of Technology, Tehran, Iran.
+Copyright (c) 2026. MIT Licence. Please cite if you use or adapt this model.
+https://github.com/melikabaghi/IPD-medical-tourism-simulation]]></Description>
 	<EngineVersion>6</EngineVersion>
 	<JavaPackageName><![CDATA[test7]]></JavaPackageName>
 	<ModelTimeUnit><![CDATA[Day]]></ModelTimeUnit>
@@ -34987,7 +35016,7 @@ agent.receive("Hospitalization");]]></Code>
 			<Name><![CDATA[Simulation]]></Name>
 			<CommandLineArguments><![CDATA[]]></CommandLineArguments>
 			<MaximumMemory>512</MaximumMemory>
-			<RandomNumberGenerationType>randomSeed</RandomNumberGenerationType>
+			<RandomNumberGenerationType>fixedSeed</RandomNumberGenerationType>
 			<CustomGeneratorCode>new Random()</CustomGeneratorCode>
 			<AfterSimulationRunCode><![CDATA[// Auto-log results to CSV after each run
 try {
@@ -35250,6 +35279,7 @@ try {
 		<VersionMinor>0</VersionMinor>
 		<VersionBuild>5</VersionBuild>
     </RequiredLibraryReference>
+	<CloudModelUuid><![CDATA[ddca6c4e-7a3b-4015-bd9f-fb8d02cb30be]]></CloudModelUuid>
 </Model>
 <ConvertersApplied>
 	<Uuid>9f7858c9-b2c8-4ead-9244-fd08833f642b</Uuid>

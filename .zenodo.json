@@ -1,0 +1,30 @@
+{
+  "upload_type": "software",
+  "title": "Compatible-Section Bed Sharing and Behavioural Risk in a Shared Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event Simulation",
+  "description": "<p>A behaviour-explicit hybrid agent-based and discrete-event simulation, built in AnyLogic, of a multi-specialty international-patient hospital department that serves medical tourists and local patients from the same beds, specialists and appointment slots.</p><p>Patient behaviour is part of the operational logic rather than post-hoc discussion: medication adherence, doctor switching, online versus in-person channel choice, and early abandonment all feed back into flow. Compatible wards borrow each other's idle beds through inter-agent message passing, and the discrete-event layer carries visits, hospitalisation, recovery and re-presentation.</p><p>Across 30 randomized-seed replications, compatible-section bed sharing reduces the mean inpatient admission queue by 43 percent (25.9 to 14.8 days, p &lt; 0.001) against an otherwise identical discrete-event-only model. The agent layer also reproduces patient abandonment, emergency escalation and realistic throughput that a pure discrete-event model suppresses by construction.</p><p>Requires AnyLogic 8.9.8 (Personal Learning Edition or higher). An interactive web build runs on AnyLogic Cloud without installation.</p>",
+  "creators": [
+    {
+      "name": "Baghi, Melika",
+      "affiliation": "Department of Industrial and Systems Engineering, Amirkabir University of Technology, Tehran, Iran"
+    },
+    {
+      "name": "Mosadegh, Hadi",
+      "affiliation": "Department of Industrial and Systems Engineering, Amirkabir University of Technology, Tehran, Iran"
+    }
+  ],
+  "license": "mit-license",
+  "access_right": "open",
+  "language": "eng",
+  "keywords": [
+    "medical tourism",
+    "hybrid simulation",
+    "agent-based modeling",
+    "discrete-event simulation",
+    "hospital operations",
+    "bed sharing",
+    "patient behaviour",
+    "capacity planning",
+    "AnyLogic",
+    "healthcare operations research"
+  ]
+}

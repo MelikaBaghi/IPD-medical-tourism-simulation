@@ -1,15 +1,27 @@
 cff-version: 1.2.0
-message: "If you use this model, please cite it as below."
+message: "If you use, adapt, or teach with this model, please cite it as below."
 type: software
 title: "Compatible-Section Bed Sharing and Behavioural Risk in a Shared Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event Simulation"
+abstract: >-
+  A behaviour-explicit hybrid agent-based and discrete-event simulation, built in AnyLogic,
+  of a multi-specialty international-patient hospital department serving medical tourists and
+  local patients from the same beds, specialists and appointment slots. Patient behaviour
+  (medication adherence, doctor switching, channel choice and early abandonment) is part of
+  the operational logic rather than post-hoc discussion, and compatible wards borrow each
+  other's idle beds through inter-agent message passing. Across 30 randomized-seed
+  replications, compatible-section bed sharing reduces the mean inpatient admission queue by
+  43 percent against an otherwise identical discrete-event-only model.
 authors:
   - family-names: Baghi
     given-names: Melika
-    affiliation: "Department of Industrial and Systems Engineering, Amirkabir University of Technology"
+    email: mbaghi3@gatech.edu
+    affiliation: "Department of Industrial and Systems Engineering, Amirkabir University of Technology, Tehran, Iran"
   - family-names: Mosadegh
     given-names: Hadi
-    affiliation: "Department of Industrial and Systems Engineering, Amirkabir University of Technology"
+    affiliation: "Department of Industrial and Systems Engineering, Amirkabir University of Technology, Tehran, Iran"
 year: 2026
+version: "1.0.0"
+date-released: 2026-09-07
 license: MIT
 repository-code: "https://github.com/melikabaghi/IPD-medical-tourism-simulation"
 keywords:
@@ -19,4 +31,5 @@ keywords:
   - discrete-event simulation
   - hospital operations
   - bed sharing
+  - patient behaviour
   - AnyLogic
