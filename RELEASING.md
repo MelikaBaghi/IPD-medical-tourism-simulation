@@ -52,10 +52,6 @@ doi: 10.5281/zenodo.XXXXXXX
 And add it to the licence header inside `IPD27_hybrid.alp`, on the line under `Source:`, so
 the DOI travels with the file itself rather than only with the repository.
 
-## When the paper is published
-
-Add the manuscript to `paper/`, then add the journal DOI to `CITATION.cff` as a
-`preferred-citation`, so that citing the model points people at the paper as well.
 
 ## Later versions
 

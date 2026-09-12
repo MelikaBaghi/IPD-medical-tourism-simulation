@@ -50,7 +50,6 @@ The `.alp` file here is the editable source.
 |---|---|
 | `IPD27_hybrid.alp` | the hybrid ABS+DES model |
 | `database/` | the model's configuration database, required to run |
-| `paper/` | the journal manuscript, added once the review is resolved |
 | `docs/` | project landing page |
 
 ## Citing this model
