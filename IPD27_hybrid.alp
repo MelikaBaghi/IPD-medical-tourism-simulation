@@ -34978,7 +34978,7 @@ agent.receive("Hospitalization");]]></Code>
 	</Frame>
 	<Database>
 		<Id>1656468989770</Id>
-		<Logging>true</Logging>
+		<Logging>false</Logging>
 		<AutoExport>false</AutoExport>
 		<ShutdownCompact>true</ShutdownCompact>
 		<ImportSettings>

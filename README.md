@@ -31,7 +31,10 @@ suppresses by construction.
 1. Open `IPD27_hybrid.alp` in **AnyLogic 8.9.8**. The Personal Learning Edition is enough.
 2. Select the **Simulation** experiment and press **Run**.
 3. Ward configuration (beds, specialists, slots) is read from the bundled `database/`
-   folder, in the `HOSPITAL` table. The run-log database rebuilds itself on first run.
+   folder, in the `HOSPITAL` table. As shipped it holds the bed-constrained configuration
+   used for the paper's hybrid-versus-DES comparison (beds 30, 16, 22, 2, 16 and
+   specialists 3, 5, 3, 3, 5 for sections 1 to 5); edit that table to try other
+   configurations. Database logging is off, so runs are fast and the folder stays small.
 4. Optionally, results append to a CSV. The path is set in the experiment's *After
    simulation run* action; change it to a folder on your machine.
 
