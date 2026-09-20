@@ -1,8 +1,8 @@
-# Medical-Tourist Hospital Flow: a Hybrid Agent-Based and Discrete-Event Simulation
+# Managing Shared Hospital Capacity for Medical Tourism: a Hybrid Agent-Based and Discrete-Event Simulation
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22646799.svg)](https://doi.org/10.5281/zenodo.22646799)
 
-A behaviour-explicit hybrid (ABS + DES) simulation, built in AnyLogic, of a multi-specialty
+A behavior-explicit hybrid (ABS + DES) simulation, built in AnyLogic, of a multi-specialty
 international-patient hospital department that serves **medical tourists and local patients
 from the same beds, specialists and appointment slots**.
 
@@ -11,20 +11,24 @@ Department of Industrial and Systems Engineering, Amirkabir University of Techno
 
 ## What makes it hybrid
 
-- **Agent-based patient behaviour.** Medication adherence, doctor switching, online versus
+- **Agent-based patient behavior.** Medication adherence, physician switching, online versus
   in-person channel choice, and early abandonment are part of the operational logic rather
   than post-hoc discussion.
 - **Compatible-section bed sharing.** Wards borrow each other's idle beds through
   inter-agent message passing.
-- **Discrete-event patient flow.** Visits, hospitalisation, recovery and re-presentation.
+- **Discrete-event patient flow.** Visits, hospitalization, recovery and re-presentation.
 
 ## Headline result
 
-Across 30 randomized-seed replications, compatible-section bed sharing reduces the mean
-inpatient admission queue by **43 percent** (25.9 to 14.8 days, *p* < 0.001) against an
-otherwise identical discrete-event-only model. The agent layer also reproduces patient
-abandonment, emergency escalation and realistic throughput that a pure discrete-event model
-suppresses by construction.
+Across 30 randomized-seed replications at a bed-constrained configuration, the hybrid model's
+mean inpatient admission waiting time is **14.8 days against 25.9 days** in an otherwise
+identical discrete-event-only model (about 43 percent lower, *p* < 0.001), and the gap
+persists (25 to 64 percent) at higher demand and at larger bed counts. The difference is the
+contribution of the behavior and coordination layer as a whole; compatible-section bed
+sharing is the mechanism that acts most directly on inpatient access, but its effect is not
+isolated from the other agent mechanisms. The agent layer also makes patient abandonment
+and adherence-driven emergency escalation visible, which a pure discrete-event model
+omits by construction.
 
 ## Run it
 
@@ -53,16 +57,16 @@ The `.alp` file here is the editable source.
 |---|---|
 | `IPD27_hybrid.alp` | the hybrid ABS+DES model |
 | `database/` | the model's configuration database, required to run |
-| `docs/` | project landing page |
+| `docs/` | project landing page and `FACTORS.md`, the mapping of the paper's 16 screening factors to model elements |
 
 ## Citing this model
 
 If you use, adapt, teach with, or build on this model, please cite it. The authorship and
-licence notice is embedded in the header of the `.alp` file itself.
+license notice is embedded in the header of the `.alp` file itself.
 
-> Baghi, M. and Mosadegh, H. (2026). *Compatible-Section Bed Sharing and Behavioural Risk
-> in a Shared Medical-Tourism Hospital Department: A Hybrid Agent-Based and Discrete-Event
-> Simulation* (software). https://doi.org/10.5281/zenodo.22646799
+> Baghi, M. and Mosadegh, H. (2026). *Managing Shared Hospital Capacity for Medical Tourism:
+> Patient Behavior, Bed Sharing, and Hybrid Simulation* (software).
+> https://doi.org/10.5281/zenodo.22646799
 
 A machine-readable version is in [`CITATION.cff`](CITATION.cff), and GitHub renders it as a
 "Cite this repository" button in the sidebar.
@@ -71,13 +75,13 @@ This model is archived in Zenodo under the DOI above. That DOI always resolves t
 newest version and gives the model a permanent, dated citation even if this repository
 moves or is renamed. See [`RELEASING.md`](RELEASING.md) for how new versions are published.
 
-## Licence
+## License
 
 Model and code: **MIT** (see [`LICENSE`](LICENSE)).
 Documentation and figures: **CC BY 4.0**.
 
 MIT is permissive: you may use this commercially, modify it, and redistribute it. The one
-condition is that the copyright and licence notice stays with it. That notice names the
+condition is that the copyright and license notice stays with it. That notice names the
 authors, which is the point.
 
 ## Requirements
