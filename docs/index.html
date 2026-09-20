@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Medical-Tourist Hospital — Hybrid ABS+DES Simulation</title>
+<title>Managing Shared Hospital Capacity for Medical Tourism: Hybrid ABS+DES Simulation</title>
 <style>
   :root{
     --bg:#0f1b2d; --card:#16263d; --ink:#eaf0f7; --muted:#9fb3c8;
@@ -40,8 +40,8 @@
 <body>
 <div class="wrap">
   <header>
-    <h1>Compatible-Section Bed Sharing in a Shared<br>Medical-Tourism Hospital Department</h1>
-    <p class="sub">A behaviour-explicit <strong>hybrid agent-based + discrete-event</strong> simulation
+    <h1>Managing Shared Hospital Capacity<br>for Medical Tourism</h1>
+    <p class="sub">A behavior-explicit <strong>hybrid agent-based + discrete-event</strong> simulation
        of a hospital department where medical tourists and local patients share the same beds,
        specialists, and appointment slots.</p>
     <p class="authors">Melika Baghi &amp; Hadi Mosadegh · Amirkabir University of Technology, Tehran</p>
@@ -49,13 +49,15 @@
 
   <div class="result">
     <div class="big">&minus;43%</div>
-    <div class="cap">Compatible-section bed sharing cuts the mean inpatient admission queue
-       (25.9 &rarr; 14.8 days, <em>p</em> &lt; 0.001), replicated over 30 randomized-seed runs
-       versus an otherwise-identical discrete-event-only model.</div>
+    <div class="cap">Mean inpatient admission waiting time is 14.8 days in the hybrid model
+       against 25.9 days in an otherwise-identical discrete-event-only model
+       (<em>p</em> &lt; 0.001, 30 randomized-seed runs each), the contribution of the
+       behavior and coordination layer as a whole; the gap persists at higher demand and
+       larger bed counts.</div>
   </div>
 
   <div class="btns">
-    <a class="btn primary" href="https://cloud.anylogic.com" target="_blank" rel="noopener">▶ Run it online</a>
+    <a class="btn primary" href="https://cloud.anylogic.com/model/ddca6c4e-7a3b-4015-bd9f-fb8d02cb30be" target="_blank" rel="noopener">▶ Run it online</a>
     <a class="btn alt" href="https://github.com/melikabaghi/IPD-medical-tourism-simulation" target="_blank" rel="noopener">Source &amp; download</a>
     <a class="btn" href="https://github.com/melikabaghi/IPD-medical-tourism-simulation/blob/main/CITATION.cff" target="_blank" rel="noopener">Cite this work</a>
   </div>
@@ -70,11 +72,11 @@
 
   <h2>What makes it a hybrid model</h2>
   <ul>
-    <li><strong>Agent-based patient behaviour</strong> — medication adherence, doctor switching,
+    <li><strong>Agent-based patient behavior</strong> — medication adherence, physician switching,
         online vs. in-person channel choice, and early abandonment are part of the operational logic.</li>
     <li><strong>Compatible-section bed sharing</strong> — wards borrow each other's idle beds through
         inter-agent message passing.</li>
-    <li><strong>Discrete-event patient flow</strong> — visits, hospitalisation, recovery, and re-presentation.</li>
+    <li><strong>Discrete-event patient flow</strong> — visits, hospitalization, recovery, and re-presentation.</li>
   </ul>
 
   <h2>Open the model yourself</h2>
