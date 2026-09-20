@@ -2,10 +2,13 @@
 
 The paper's screening experiment varies 16 factors, coded A to P. This table maps each
 factor to the element of `IPD27_hybrid.alp` (or its `database/` folder) that implements it.
-Section numbering: 1 = breast oncology (`BreastCancer`), 2 = internal medicine
-(`LungCancer`), 3 = cardiology (`HeartDisease`), 4 = cosmetic surgery (`CosmeticSurgery`),
-5 = pediatrics (`ColonCancer`); the names in code are the enum labels kept from the original
-build and do not change the model logic.
+Section numbering follows the case study's specialist list: 1 = cardiology, 2 = internal
+medicine, 3 = cosmetic surgery, 4 = pediatrics, 5 = breast oncology. The `Disease` enum labels
+in the code (`BreastCancer`, `LungCancer`, `HeartDisease`, `CosmeticSurgery`, `ColonCancer`, in
+that section order) are placeholders kept from an early build and do not describe the sections;
+the per-section clinic schedules (`Specialist1WorkingTime` to `Specialist5WorkingTime`) match the
+specialists' documented timetables in the order above. Sections 1, 2, and 5 form the
+bed-sharing group (`BorrowFromSections`); sections 3 and 4 keep their beds.
 
 | Factor | Meaning | Where it is set | Value in the released model |
 |---|---|---|---|
@@ -14,7 +17,7 @@ build and do not change the model logic.
 | K | Share of medical tourists routed to online consultation | Patient agent, channel decision in the `OnlineOrNot` branch (tourist probability) | model default |
 | L | Share of local patients routed to online consultation | Same branch, local probability | model default |
 | M | Online bed-scheduling rule | `Main` function `schedulingToHospitalizationOnline`: with the rule on (high level), a referral is deferred by `DaysAfter` days when the section's `WaitForEmptyBed` queue is longer than `noEmpty`; with the rule off (low level), the referral takes the next available position | Deferred (high): `DaysAfter = 10`, `noEmpty = 10` |
-| N | In-person bed-scheduling rule | `Main` functions `schedulingToHospitalization` (direct placement in the section's `Bed` list) and `schedulingToHospitalizationInPerson` (placement deferred by `DaysAfter`), selected at the in-person admission branch | branch controlled by the `decision` parameter (0.8) |
+| N | In-person bed-scheduling rule | `Main` functions `schedulingToHospitalization` (direct placement in the section's `Bed` list) and `schedulingToHospitalizationInPerson` (placement deferred by `DaysAfter`), selected at the `StayOrNot` branch: direct when `randomTrue(0.7) || stayOrNot(agent)` holds, where `stayOrNot` is true while the section's `WaitForEmptyBed` queue is shorter than `noEmpty`; deferred otherwise | mixed rule as described (`noEmpty = 10`, `DaysAfter = 10`) |
 | O | Admission-queue priority rule | Priority assigned to a patient at the admission branch (`agent.priority`): tourists first (`4`), locals next (`3`), online-referred patients behind both (`2`); served through `waitForEmptyBed_priority`. The high level of O replaces this with service in order of referral | Tourists first (low level) |
 | P | Clinic appointment-slot interval | `Main` parameter `slot` (minutes), the recurrence of the `WorkingTimes` slot event | 2 minutes |
 
