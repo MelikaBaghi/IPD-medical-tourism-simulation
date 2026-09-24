@@ -83,7 +83,7 @@ If you use, adapt, teach with, or build on this model, please cite it. The autho
 license notice is embedded in the header of the `.alp` file itself.
 
 > Baghi, M. and Mosadegh, H. (2026). *Managing Shared Hospital Capacity for Medical Tourism:
-> Patient Behavior, Bed Sharing, and Hybrid Simulation* (software).
+> Patient Behavior and Hybrid Simulation* (software).
 > https://doi.org/10.5281/zenodo.22646799
 
 A machine-readable version is in [`CITATION.cff`](CITATION.cff), and GitHub renders it as a

@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use, adapt, or teach with this model, please cite it as below."
 type: software
-title: "Managing Shared Hospital Capacity for Medical Tourism: Patient Behavior, Bed Sharing, and Hybrid Simulation (simulation model)"
+title: "Managing Shared Hospital Capacity for Medical Tourism: Patient Behavior and Hybrid Simulation (simulation model)"
 abstract: >-
   A behavior-explicit hybrid agent-based and discrete-event simulation, built in AnyLogic,
   of a multi-specialty international-patient hospital department serving medical tourists and
