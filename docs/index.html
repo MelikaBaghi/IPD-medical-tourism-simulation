@@ -52,9 +52,9 @@
     <div class="cap">Mean inpatient admission waiting time is 14.8 days in the hybrid model
        against 25.8 days in an otherwise-identical discrete-event-only model
        (<em>p</em> &lt; 0.001; 30 hybrid and 36 discrete-event-only randomized-seed runs), the
-       contribution of the behavior and coordination layer as a whole; the gap persists at higher
-       demand and larger bed counts. Neither version has been validated against observed
-       waiting times.</div>
+       combined effect of the patient-behavior mechanisms; the gap persists at higher demand and
+       larger bed counts. The model's bed-sharing routine runs in both versions and adds no beds
+       as implemented. Neither version has been validated against observed waiting times.</div>
   </div>
 
   <div class="btns">
@@ -75,9 +75,9 @@
   <ul>
     <li><strong>Agent-based patient behavior</strong> — medication adherence, physician switching,
         online vs. in-person channel choice, and early abandonment are part of the operational logic.</li>
-    <li><strong>Compatible-section bed sharing</strong> — cardiology, internal medicine and breast
-        oncology lend each other idle beds through inter-agent message passing; cosmetic surgery
-        and pediatrics keep their own.</li>
+    <li><strong>Bed-sharing routine</strong> — meant to let cardiology, internal medicine and breast
+        oncology lend each other idle beds; as implemented it never adds beds (see the README),
+        and it runs in both model versions.</li>
     <li><strong>Discrete-event patient flow</strong> — visits, hospitalization, recovery, and re-presentation.</li>
   </ul>
 

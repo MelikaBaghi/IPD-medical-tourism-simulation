@@ -8,7 +8,8 @@ in the code (`BreastCancer`, `LungCancer`, `HeartDisease`, `CosmeticSurgery`, `C
 that section order) are placeholders kept from an early build and do not describe the sections;
 the per-section clinic schedules (`Specialist1WorkingTime` to `Specialist5WorkingTime`) match the
 specialists' documented timetables in the order above. Sections 1, 2, and 5 form the
-bed-sharing group (`BorrowFromSections`); sections 3 and 4 keep their beds.
+bed-sharing group (`BorrowFromSections`); sections 3 and 4 keep their beds. As implemented, the
+sharing routine never adds beds (README, *Known issue: bed-sharing routine*).
 
 | Factor | Meaning | Where it is set | Value in the released model |
 |---|---|---|---|

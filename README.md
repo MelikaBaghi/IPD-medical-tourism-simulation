@@ -14,8 +14,9 @@ Department of Industrial and Systems Engineering, Amirkabir University of Techno
 - **Agent-based patient behavior.** Medication adherence, physician switching, online versus
   in-person channel choice, and early abandonment are part of the operational logic rather
   than post-hoc discussion.
-- **Compatible-section bed sharing.** Wards borrow each other's idle beds through
-  inter-agent message passing.
+- **Bed-sharing routine (known issue).** A daily routine among the compatible sections
+  (cardiology, internal medicine, breast oncology) is meant to let a congested ward borrow idle
+  beds; as implemented it never adds beds. See *Known issue: bed-sharing routine* below.
 - **Discrete-event patient flow.** Visits, hospitalization, recovery and re-presentation.
 
 ## Headline result
@@ -24,11 +25,28 @@ Across 30 hybrid and 36 discrete-event-only randomized-seed replications at a be
 mean inpatient admission waiting time is **14.8 days against 25.8 days** in an otherwise
 identical discrete-event-only model (about 42 percent lower, *p* < 0.001), and the gap
 persists (25 to 64 percent) at higher demand and at larger bed counts. The difference is the
-contribution of the behavior and coordination layer as a whole; compatible-section bed
-sharing is the mechanism that acts most directly on inpatient access, but its effect is not
-isolated from the other agent mechanisms. The agent layer also makes patient abandonment
-and adherence-driven emergency escalation visible, which a pure discrete-event model
-omits by construction.
+combined effect of the patient-behavior mechanisms, which the discrete-event-only version
+removes. The bed-sharing routine runs in both versions and adds no beds (see below), so the
+comparison does not evaluate bed sharing. The behavior mechanisms also make patient
+abandonment and adherence-driven emergency escalation visible, which a pure discrete-event
+model omits by construction.
+
+## Known issue: bed-sharing routine
+
+Beds are transferred by two daily events of `Main`, `BorrowFromSections` and
+`TakeBackeFromSections`, over sections 1, 2 and 5. A section is flagged as short of beds when
+more than three patients wait for a bed, and as able to lend when `occupied / Beds >= 0.5`;
+both operands are integers, so this holds only when every bed is occupied. Flags are cleared
+only by a transfer. The borrower adds `floor((occupied - Beds) * 0.5)` of the lender to its
+`TotalBeds`, which is zero for a full lender and negative when the lender's flag is stale.
+Every section starts with `TotalBeds = Beds`, so no transfer is ever positive: a negative
+transfer lowers the borrower's `TotalBeds` for the rest of the run, and the give-back event,
+which acts only on positive transfers, never runs (its lines for sections 2 and 5 also
+subtract section 1's transfer instead of their own). The discrete-event-only version used in
+the paper runs the same two events. The model is kept exactly as it was run for the paper's
+results; the rule described in the documentation, lending half of a section's free beds when
+more than half of them are free, would replace the lender test with
+`(Beds - occupied) * 2 > Beds` and the transfer with `floor((Beds - occupied) * 0.5)`.
 
 ## Run it
 

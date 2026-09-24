@@ -7,11 +7,12 @@ abstract: >-
   of a multi-specialty international-patient hospital department serving medical tourists and
   local patients from the same beds, specialists and appointment slots. Patient behavior
   (medication adherence, physician switching, channel choice and early abandonment) is part
-  of the operational logic, and compatible wards borrow each other's idle beds through
-  inter-agent message passing. Across 30 randomized-seed replications at a bed-constrained
-  configuration, the hybrid model's mean inpatient admission waiting time is 14.8 days
-  against 25.8 days in an otherwise identical discrete-event-only model; the difference is
-  the contribution of the behavior and coordination layer as a whole.
+  of the operational logic. Across 30 hybrid and 36 discrete-event-only randomized-seed
+  replications at a bed-constrained configuration, the hybrid model's mean inpatient
+  admission waiting time is 14.8 days against 25.8 days in an otherwise identical
+  discrete-event-only model; the difference is the combined effect of the patient-behavior
+  mechanisms. The model's bed-sharing routine runs in both versions and, as implemented,
+  adds no beds (see the README).
 authors:
   - family-names: Baghi
     given-names: Melika
@@ -32,6 +33,6 @@ keywords:
   - agent-based modeling
   - discrete-event simulation
   - hospital operations
-  - bed sharing
+  - bed management
   - patient behavior
   - AnyLogic
