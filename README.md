@@ -20,7 +20,7 @@ Department of Industrial and Systems Engineering, Amirkabir University of Techno
 
 ## Headline result
 
-Across 30 randomized-seed replications at a bed-constrained configuration, the hybrid model's
+Across 30 hybrid and 36 discrete-event-only randomized-seed replications at a bed-constrained configuration, the hybrid model's
 mean inpatient admission waiting time is **14.8 days against 25.8 days** in an otherwise
 identical discrete-event-only model (about 42 percent lower, *p* < 0.001), and the gap
 persists (25 to 64 percent) at higher demand and at larger bed counts. The difference is the
